@@ -4,4 +4,6 @@
 
 import 'package:flutter/widgets.dart';
 
-void main() => runApp(const Center(child: Text('Hello, world!', textDirection: TextDirection.ltr)));
+import 'version_fake.dart' if (dart.library.io) 'version_io.dart';
+
+void main() => runApp(Center(child: Text('Hello, world!\nversion:$version', textDirection: TextDirection.ltr)));
